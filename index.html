@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مجرّة القدرات – الكمي</title>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#140b2a;--ink:#f4efff;--mut:#b8a9d9;--line:#3b2a66;--card:#1f1340;--ok:#5eead4;--bad:#fb7185;--c:#fbbf24;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100vh;-webkit-text-size-adjust:100%;color:var(--ink);font-family:Tajawal,Tahoma,sans-serif;line-height:1.7;
+background:radial-gradient(1.5px 1.5px at 12% 20%,#fff,transparent),radial-gradient(1px 1px at 70% 12%,#fff,transparent),radial-gradient(2px 2px at 85% 60%,#ffd9a8,transparent),radial-gradient(1px 1px at 30% 75%,#fff,transparent),radial-gradient(1.5px 1.5px at 50% 45%,#c7b8ff,transparent),radial-gradient(ellipse at 20% 110%,#4c1d95 0,transparent 55%),radial-gradient(ellipse at 90% -10%,#9d174d 0,transparent 45%),var(--bg)}
+main{max-width:860px;margin:0 auto;padding:64px 16px 40px}
+.top{position:fixed;top:0;left:0;right:0;z-index:5;padding:calc(env(safe-area-inset-top,0px) + 8px) 14px 8px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(var(--bg),transparent)}
+.home{border:1.5px solid var(--c);background:var(--card);color:var(--ink);padding:8px 16px;border-radius:999px;font:inherit;font-weight:800;cursor:pointer}
+.home:hover{background:var(--c);color:#1a0f33}
+.pts{color:var(--mut);font-weight:700}
+h1{font-family:'Aref Ruqaa',serif;font-size:clamp(2.6rem,9vw,4.6rem);line-height:1.15;margin:.1em 0;text-align:center;transform:rotate(-2deg);text-shadow:0 0 28px #a78bfa}
+.lead{text-align:center;color:var(--mut);margin:0 auto 10px;max-width:34ch}
+.sky{display:grid;grid-template-columns:1fr 1fr;gap:34px 10px;padding:40px 0}
+.pw{display:flex;flex-direction:column;align-items:center;background:none;border:0;color:var(--ink);font:inherit;cursor:pointer;position:relative}
+.pw:nth-child(even){transform:translateY(46px)}
+.pl{width:130px;height:130px;border-radius:50%;position:relative;background:radial-gradient(circle at 32% 28%,#fff8,transparent 30%),radial-gradient(circle at 35% 30%,var(--c),#0006 120%);box-shadow:0 0 38px var(--c),inset -14px -12px 24px #0008;transition:transform .3s}
+.pw:hover .pl,.pw:focus-visible .pl{transform:scale(1.1) rotate(8deg)}.pw:focus-visible{outline:3px solid var(--c);outline-offset:14px;border-radius:24px}
+.pl::after{content:"";position:absolute;top:-14%;bottom:-14%;left:-34%;right:-34%;border:3px solid var(--c);border-radius:50%;transform:rotate(-18deg) scaleY(.28);opacity:.8}
+.orb{position:absolute;top:-26px;bottom:-26px;left:-26px;right:-26px;animation:sp 16s linear infinite;pointer-events:none}
+.orb i{position:absolute;top:0;bottom:0;left:0;right:0;transform:rotate(var(--r))}
+.orb i::before{content:attr(data-s);position:absolute;top:-4px;left:50%;font:700 1.3rem Tajawal;color:var(--c);text-shadow:0 0 8px var(--c)}
+@keyframes sp{to{transform:rotate(360deg)}}
+.pw b{margin-top:22px;font-size:1.3rem}.pw span{color:var(--mut);font-size:.85rem}
+.mix{display:block;margin:70px auto 0;padding:14px 26px;border-radius:18px;border:2px dashed #e879f9;background:transparent;color:var(--ink);font:inherit;font-weight:800;cursor:pointer}
+.mix:hover{background:#e879f922}
+.q{background:var(--card);border:1px solid var(--line);border-radius:22px 22px 22px 4px;padding:18px;margin:14px 0}
+.q p{margin:.1em 0 .7em;font-size:1.2rem;font-weight:800}
+.prog{display:flex;gap:6px;margin:6px 0}.prog u{flex:1;height:6px;border-radius:9px;background:var(--line);text-decoration:none}.prog u.d{background:var(--c)}
+.viz{text-align:center;margin:6px 0;overflow-x:auto}.viz svg{max-width:100%;height:auto}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:480px){.opts{grid-template-columns:1fr}}
+.o{padding:12px;border:2px solid var(--line);border-radius:14px;background:#ffffff0d;color:var(--ink);font:inherit;font-size:1.05rem;cursor:pointer}
+.o:hover:not(:disabled){border-color:var(--c)}.o.ok{border-color:var(--ok);background:#5eead433}.o.bad{border-color:var(--bad);background:#fb718533}
+.fb{margin-top:12px;padding:10px 12px;border-radius:10px;border-right:5px solid var(--ok);background:#ffffff0d}.fb.x{border-color:var(--bad)}
+.go{margin-top:12px;padding:10px 24px;border:0;border-radius:12px;background:var(--c);color:#1a0f33;font:inherit;font-weight:800;cursor:pointer}
+button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.end{text-align:center}.stars{font-size:2.6rem;letter-spacing:8px;color:var(--c)}.big{font-family:'Aref Ruqaa',serif;font-size:2.6rem}
+.wk{display:table;margin:8px auto 0;padding:6px 18px;border:1px solid var(--c);border-radius:999px;color:var(--c);font-weight:800;background:#ffffff0d}
+.mot{text-align:center;font-family:'Aref Ruqaa',serif;font-size:1.35rem;margin:4px 0 12px;color:var(--ink)}
+.ft{margin-top:56px;padding-top:16px;border-top:1px dashed var(--line);text-align:center;color:var(--mut)}.ft b{display:block;color:var(--ink);font-size:1.1rem}
+@media(prefers-reduced-motion:reduce){.orb{animation:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="top"><button class="home" onclick="home()">العودة للرئيسية</button><span><span class="pts" id="pts"></span> <button class="home dl" onclick="dl()" aria-label="تنزيل الصفحة على الجهاز">⬇ تنزيل</button></span></div>
+<main id="app"></main>
+<script>
+const Z=[
+{n:'كوكب الحساب',s:'عشريات وسرعات',c:'#38bdf8',sy:['+','×','÷'],q:[
+{q:'ما قيمة 7 + 0.7 + 0.07 + 0.007 + 0.0007 ؟',o:['7.7847','7.7747','7.7777','7.8747'],a:2,e:'نساوي الخانات العشرية ونجمع رأسيًا: 7.7777'},
+{q:'1 − 0.0006 = ؟',o:['0.9994','0.994','0.9004','0.004'],a:0,e:'1.0000 − 0.0006 = 0.9994'},
+{q:'4 × 0.04 × 0.4 × 0.002 = ؟',o:['0.000128','0.00128','0.128','128000'],a:0,e:'4×4×4×2 = 128، وبعد الفاصلة 0+2+1+3 = 6 خانات: 0.000128'},
+{q:'قطعت سيارة 180 كم في ساعتين ونصف. ما سرعتها (كم/ساعة)؟',o:['60','72','75','90'],a:1,e:'السرعة = المسافة ÷ الزمن = 180 ÷ 2.5 = 72'}]},
+{n:'كوكب الجبر',s:'متطابقات ومعادلات',c:'#a78bfa',sy:['س','²','='],q:[
+{q:'999² − 1 = ؟',o:['998000','999000','998001','997000'],a:0,e:'فرق مربعين: (999−1)(999+1) = 998 × 1000'},
+{q:'إذا كان أ + 2ب = 5 ، أ − 2ب = 3 فما قيمة أ² + ب² ؟',o:['15.75','16.25','15','16'],a:1,e:'بالجمع أ = 4، ثم ب = ½ ، فـ 16 + 0.25 = 16.25'},
+{q:'إذا كان س + ص = 10 و س ص = 21 فما قيمة س² + ص² ؟',o:['58','79','100','42'],a:0,e:'(س+ص)² − 2سص = 100 − 42 = 58'},
+{q:'إذا كان 2ص² + س = 10 و ص² = 1 فما قيمة س ؟',o:['صفر','1','9','8'],a:3,e:'نعوّض ص² = 1: 2 + س = 10 فس = 8'}]},
+{n:'كوكب الهندسة',s:'مثلثات وزوايا',c:'#34d399',sy:['△','∠','°'],q:[
+{q:'س + جـ = 180° وكان س = 2جـ . ما قياس جـ ؟',o:['360°','180°','210°','60°'],a:3,e:'2جـ + جـ = 180 فـ جـ = 60°'},
+{q:'مثلث مختلف الأضلاع محيطه 21 سم وأطول أضلاعه 8 سم. ما طول أصغر أضلاعه؟',o:['4','6','7','8'],a:1,e:'الضلعان الآخران مجموعهما 13 وكلٌّ أقل من 8: هما 6 و7'},
+{q:'م مركز دائرة، وزاويتا القاعدة في المثلث م أ ب كلٌّ منهما 50°. ما قياس زاوية الرأس؟',o:['70°','80°','60°','55°'],a:1,e:'نصفا القطر متساويان: 180 − 100 = 80°'},
+{q:'مثلث قائم ضلعا القائمة فيه 5 و 12. ما طول الوتر؟',o:['13','17','60','169'],a:0,e:'فيثاغورس: √(25+144) = 13'}]},
+{n:'كوكب البيانات',s:'جداول ورسوم',c:'#fb923c',sy:['%','Σ','◔'],q:[
+{q:'ما نسبة الزيادة بين يومي السبت والأحد؟',v:['b',[['سبت',25],['أحد',40],['إثنين',55],['ثلاثاء',50]]],o:['20%','25%','40%','60%'],a:3,e:'(40 − 25) ÷ 25 × 100 = 60%'},
+{q:'ما قياس زاوية السيارات الحمراء؟',v:['p',[['حمراء 30%',30,'#ef4444'],['بيضاء 40%',40,'#e2e8f0'],['زرقاء 15%',15,'#3b82f6'],['أخرى 15%',15,'#eab308']]],o:['108°','180°','90°','80°'],a:0,e:'0.30 × 360 = 108°'},
+{q:'ستة أعداد متوسطها 8 وأربعة أخرى متوسطها 3. ما متوسط العشرة؟',o:['5','4','6','7'],a:2,e:'(48 + 12) ÷ 10 = 6'},
+{q:'بكم طريقة نختار فريقًا من 5 لاعبين من 10؟',o:['152','252','352','452'],a:1,e:'(10×9×8×7×6) ÷ 120 = 252'}]}];
+const $=s=>document.querySelector(s),app=$('#app');
+let xp=0;try{xp=+localStorage.getItem('gxp')||0}catch(e){}
+const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+function viz(v){if(!v)return'';let h;
+if(v[0]==='p'){const T=v[1].reduce((s,x)=>s+x[1],0);let a=-Math.PI/2,p='',l='';v[1].forEach(x=>{const b=a+x[1]/T*6.2832;p+=`<path d="M70 70L${70+64*Math.cos(a)} ${70+64*Math.sin(a)}A64 64 0 ${b-a>3.1416?1:0} 1 ${70+64*Math.cos(b)} ${70+64*Math.sin(b)}Z" fill="${x[2]}"/>`;a=b;l+=`<span style="margin:0 6px"><b style="color:${x[2]}">■</b> ${x[0]}</span>`});h=`<svg viewBox="0 0 140 140" width="150">${p}</svg><div>${l}</div>`}
+else{const m=Math.max(...v[1].map(x=>x[1]));h=`<svg viewBox="0 0 ${v[1].length*64} 150" width="300">`+v[1].map((x,i)=>{const t=x[1]/m*95;return `<rect x="${i*64+12}" y="${112-t}" width="40" height="${t}" rx="6" fill="var(--c)"/><text x="${i*64+32}" y="${105-t}" text-anchor="middle" font-size="13" fill="#fff">${x[1]}</text><text x="${i*64+32}" y="132" text-anchor="middle" font-size="12" fill="#fff">${x[0]}</text>`}).join('')+'</svg>'}
+return `<div class="viz">${h}</div>`}
+function home(){app.style.setProperty('--c','#fbbf24');document.documentElement.style.setProperty('--c','#fbbf24');$('#pts').textContent='رصيدك: '+xp+' نجمة';
+app.innerHTML=`<div class="wk">أسبوع الفضاء والرياضيات</div><h1>مجرّة القدرات</h1><div class="mot">بالرياضيات نقرأ النجوم، وبالنجوم نصل أبعد</div><p class="lead">أربعة كواكب من الأرقام. اهبط على أي كوكب وأنقذه بإجاباتك الصحيحة.</p>
+<div class="sky">${Z.map((z,i)=>`<button class="pw" style="--c:${z.c}" onclick="go(${i})" aria-label="${z.n}"><div class="pl"><div class="orb">${z.sy.map((s,k)=>`<i data-s="${s}" style="--r:${k*120}deg"></i>`).join('')}</div></div><b>${z.n}</b><span>${z.s}</span></button>`).join('')}</div>
+<button class="mix" onclick="go(-1)">رحلة عبر المجرّة كلها (٨ أسئلة)</button><div class="ft">إعداد<b>معلمات الرياضيات</b>الثانوية الثالثة بالخبر</div>`;scrollTo(0,0)}
+let G;
+function go(i){const z=i<0?{n:'رحلة المجرّة',c:'#e879f9',q:Z.flatMap(x=>sh(x.q).slice(0,2))}:Z[i];
+G={z,l:sh(z.q),i:0,ok:0,st:0};document.documentElement.style.setProperty('--c',z.c);ask()}
+function ask(){const q=G.l[G.i];G.o=sh(q.o.map((t,k)=>[t,k]));G.d=0;
+app.innerHTML=`<h2 style="margin:.2em 0;color:var(--c)">${G.z.n}</h2><div class="prog">${G.l.map((_,k)=>`<u class="${k<G.i?'d':''}"></u>`).join('')}</div>
+<div class="q"><p>${q.q}</p>${viz(q.v)}<div class="opts">${G.o.map((o,k)=>`<button class="o" onclick="pick(${k})">${o[0]}</button>`).join('')}</div><div id="fb"></div></div>`;scrollTo(0,0)}
+function pick(k){if(G.d)return;G.d=1;const q=G.l[G.i],r=G.o[k][1]===q.a,last=G.i+1>=G.l.length;
+document.querySelectorAll('.o').forEach((b,j)=>{b.disabled=true;if(G.o[j][1]===q.a)b.classList.add('ok');else if(j===k)b.classList.add('bad')});
+if(r){G.ok++;G.st++}else G.st=0;
+$('#fb').innerHTML=`<div class="fb ${r?'':'x'}"><b>${r?(G.st>1?'سلسلة '+G.st+' متتالية!':'أحسنت!'):'ليست الصحيحة.'}</b> ${q.e}</div><button class="go" onclick="${last?'end()':'G.i++;ask()'}">${last?'النتيجة':'التالي'}</button>`;$('.go').focus()}
+function end(){const p=G.ok/G.l.length,s=p>=.85?3:p>=.6?2:p>0?1:0;xp+=G.ok;try{localStorage.setItem('gxp',xp)}catch(e){}$('#pts').textContent='رصيدك: '+xp+' نجمة';
+app.innerHTML=`<div class="end"><h1 style="transform:none">${s===3?'كوكب منقَذ!':s?'تقدّم جميل':'حاول مجددًا'}</h1><div class="stars">${'★'.repeat(s)}${'☆'.repeat(3-s)}</div><p class="big">${G.ok} / ${G.l.length}</p>
+<button class="go" onclick="go(${Z.indexOf(G.z)})">رحلة جديدة</button> <button class="home" style="margin-top:12px" onclick="home()">العودة للرئيسية</button></div>`}
+async function dl(){const d=document.documentElement.cloneNode(true);d.querySelector('#app').innerHTML='';const h=d.querySelector('head'),m=d.querySelector('meta[charset]');while(h.firstChild&&h.firstChild!==m)h.removeChild(h.firstChild);d.removeAttribute('style');d.removeAttribute('data-theme');
+const blob=new Blob(['<!DOCTYPE html>\n'+d.outerHTML],{type:'text/html'});
+try{const D=window.claude&&await window.claude.use('downloads');if(D){await D.save({filename:'qudrat-galaxy.html',data:blob});return}}catch(e){if(e&&e.code==='declined')return}
+const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='qudrat-galaxy.html';a.click()}
+home();
+</script>
+</body>
+</html>
